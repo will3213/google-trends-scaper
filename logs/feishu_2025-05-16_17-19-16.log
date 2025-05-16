@@ -1,0 +1,214 @@
+Starting Feishu uploader and sender script...
+Attempting to get tenant_access_token with APP_ID: cli_a...
+Successfully obtained tenant_access_token.
+Tenant access token obtained: t-g1045gh1...
+Uploading chatgpt.png...
+Uploading chatgpt.png...
+X-Tt-Logid: 20250516182022DDE919B7A0508F956F4E
+Successfully uploaded chatgpt.png, image_key: img_v3_02mb_7e536928-7883-4236-a774-1dd5c03127fg
+Uploading chat_models_Claude_deepseek_gemini_grok.png...
+Uploading chat_models_Claude_deepseek_gemini_grok.png...
+X-Tt-Logid: 20250516182022149440B1F343F1AB1C0D
+Successfully uploaded chat_models_Claude_deepseek_gemini_grok.png, image_key: img_v3_02mb_99cbb0ea-8bcc-44b2-97ee-4820db0afccg
+Uploading ai_video_models_Kling_Pika_Hailuo_Runway.png...
+Uploading ai_video_models_Kling_Pika_Hailuo_Runway.png...
+X-Tt-Logid: 20250516182023F0404AF1426DD89BA019
+Successfully uploaded ai_video_models_Kling_Pika_Hailuo_Runway.png, image_key: img_v3_02mb_34c66765-a960-4642-a98c-f3c6c155b75g
+Uploading function_terms_ai_translate_ai_write_chatpdf.png...
+Uploading function_terms_ai_translate_ai_write_chatpdf.png...
+X-Tt-Logid: 20250516182023AA0FB8B3E55A76A1CEF7
+Successfully uploaded function_terms_ai_translate_ai_write_chatpdf.png, image_key: img_v3_02mb_e2ca15ec-05e0-43ef-b1f5-15de2749182g
+Uploading ai_video_ai_image_animation.png...
+Uploading ai_video_ai_image_animation.png...
+X-Tt-Logid: 2025051618202459FF7EDFB0A950A6BA99
+Successfully uploaded ai_video_ai_image_animation.png, image_key: img_v3_02mb_c4feab57-c8eb-4f9f-a453-6300a98f278g
+Uploading gpt_4o.png...
+Uploading gpt_4o.png...
+X-Tt-Logid: 2025051618202478751D78D2F373954B1E
+Successfully uploaded gpt_4o.png, image_key: img_v3_02mb_63a5ba5a-b9ac-4052-8f31-a13488f6505g
+Uploading ai_agent_terms_Manus_devin_genspark_lovable.png...
+Uploading ai_agent_terms_Manus_devin_genspark_lovable.png...
+X-Tt-Logid: 20250516182025A350647B1EBCC69AFE74
+Successfully uploaded ai_agent_terms_Manus_devin_genspark_lovable.png, image_key: img_v3_02mb_9619030e-585c-4aa6-b539-a124ea59348g
+Uploading lovart_flowith_fellou_deepwiki.png...
+Uploading lovart_flowith_fellou_deepwiki.png...
+X-Tt-Logid: 2025051618202511D87DC970ABD9A5545F
+Successfully uploaded lovart_flowith_fellou_deepwiki.png, image_key: img_v3_02mb_dff108c6-44fe-40ed-a78a-52fa8eecfe7g
+
+Prepared Feishu Message:
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": true
+    },
+    "header": {
+      "title": {
+        "tag": "plain_text",
+        "content": "2025-05-16 Google trends 热词趋势查询"
+      },
+      "template": "blue"
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**2025-05-16 Google trends 热词趋势查询**"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**chatgpt:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_7e536928-7883-4236-a774-1dd5c03127fg",
+        "alt": {
+          "tag": "plain_text",
+          "content": "chatgpt"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**chat模型词：Claude/deepseek/gemini/grok:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_99cbb0ea-8bcc-44b2-97ee-4820db0afccg",
+        "alt": {
+          "tag": "plain_text",
+          "content": "chat模型词：Claude/deepseek/gemini/grok"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_34c66765-a960-4642-a98c-f3c6c155b75g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**功能词：ai translate/ai write/chatpdf:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_e2ca15ec-05e0-43ef-b1f5-15de2749182g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "功能词：ai translate/ai write/chatpdf"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**ai video/ai image/animation:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_c4feab57-c8eb-4f9f-a453-6300a98f278g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "ai video/ai image/animation"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**gpt 4o:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_63a5ba5a-b9ac-4052-8f31-a13488f6505g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "gpt 4o"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**AI agent词：Manus/devin/genspark/lovable:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_9619030e-585c-4aa6-b539-a124ea59348g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "AI agent词：Manus/devin/genspark/lovable"
+        }
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**lovart/flowith/fellou/deepwiki:**"
+        }
+      },
+      {
+        "tag": "img",
+        "img_key": "img_v3_02mb_dff108c6-44fe-40ed-a78a-52fa8eecfe7g",
+        "alt": {
+          "tag": "plain_text",
+          "content": "lovart/flowith/fellou/deepwiki"
+        }
+      },
+      {
+        "tag": "hr"
+      }
+    ]
+  }
+}
+
+Sending message to Feishu webhook: https://open.feishu.cn/open-apis/bot/v2/hook/221bb6ff-af65-4f55-b639-6bb4ecf456c0
+Successfully sent message to Feishu webhook: https://open.feishu.cn/open-apis/bot/v2/hook/221bb6ff-af65-4f55-b639-6bb4ecf456c0
+Feishu response: {'StatusCode': 0, 'StatusMessage': 'success', 'code': 0, 'data': {}, 'msg': 'success'}
+Feishu uploader and sender script finished.

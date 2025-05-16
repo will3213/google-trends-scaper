@@ -8,17 +8,24 @@
 
 ### 核心功能
 
-1. **自动截图**：使用 Playwright 访问 Google Trends 页面并截取指定关键词的趋势图表
-2. **飞书集成**：将截图上传到飞书并通过飞书机器人发送到指定群组
-3. **定时执行**：支持通过 cron 任务定时执行，实现每日自动汇报
+1. **数据获取**：使用 pytrends API 获取 Google Trends 数据并生成趋势图表
+2. **网页截图**：使用 Playwright 访问 Google Trends 页面并截取指定关键词的趋势图表（备选方案）
+3. **飞书集成**：将图表上传到飞书并通过飞书机器人发送到指定群组
+4. **自动化工作流**：提供完整的工作流脚本，确保数据获取和发送的顺序执行
+5. **定时执行**：支持通过 cron 任务定时执行，实现每日自动汇报
 
 ## 项目结构
 
-- `take_screenshots.py` - 负责访问 Google Trends 链接并截取页面首屏
-- `feishu_sender.py` - 负责将截图上传到飞书，组装消息内容，并通过飞书机器人 Webhook 发送到指定群组
-- `feishu_uploader.py` - 提供飞书图片上传功能的独立模块
-- `config_guide.md` - 详细的配置指南
-- `deployment_and_maintenance_guide.md` - 部署和维护指南
+### 核心脚本
+
+- `trends_api.py` - **主要脚本**，使用 pytrends API 获取 Google Trends 数据并生成趋势图表
+- `feishu_sender.py` - 负责将图表上传到飞书，组装消息内容，并通过飞书机器人 Webhook 发送到指定群组
+- `run_trends_workflow.sh` - 协调脚本，按顺序执行数据获取和飞书发送，并记录日志
+
+### 辅助脚本
+
+- `take_screenshots.py` - 备选方案，使用 Playwright 访问 Google Trends 页面并截取趋势图表
+- `trends_api_single.py` - 用于处理单个关键词组的辅助脚本，用于解决特定问题
 
 ## 系统需求
 
@@ -71,11 +78,28 @@
 
 ## 使用方法
 
-### 手动运行
+### 推荐方式：使用工作流脚本
 
-1. 运行截图脚本
+使用工作流脚本可以确保数据获取和飞书发送按正确顺序执行：
+
+```bash
+# 运行完整工作流（数据获取 + 飞书发送）
+./run_trends_workflow.sh
+```
+
+工作流脚本会：
+1. 首先执行 `trends_api.py` 获取数据并生成图表
+2. 检查数据获取是否成功
+3. 如果成功，再执行 `feishu_sender.py` 发送到飞书
+4. 记录日志到 `logs` 目录
+
+### 分步手动运行
+
+如果您想分步手动运行，可以按以下顺序执行：
+
+1. 运行数据获取脚本（使用 pytrends API）
    ```bash
-   python3 take_screenshots.py
+   python3 trends_api.py
    ```
 
 2. 运行飞书发送脚本
@@ -83,19 +107,28 @@
    python3 feishu_sender.py
    ```
 
+3. （备选）如果 API 方法失效，可以使用截图方式
+   ```bash
+   python3 take_screenshots.py
+   ```
+
 ### 设置定时任务
 
 使用 crontab 设置定时任务，例如：
 
 ```bash
-# 每日早上9:00执行截图脚本
-0 9 * * * /usr/bin/python3 /path/to/take_screenshots.py >> /path/to/cron_screenshot.log 2>&1
-
-# 每日早上9:01执行飞书消息发送脚本
-1 9 * * * /usr/bin/python3 /path/to/feishu_sender.py >> /path/to/cron_feishu_sender.log 2>&1
+# 每日早上9:00执行完整工作流
+0 9 * * * /path/to/google-trends-scraper/run_trends_workflow.sh >> /path/to/cron_workflow.log 2>&1
 ```
 
-详细部署和维护说明请参考 `deployment_and_maintenance_guide.md`。
+## 日志查看
+
+工作流脚本会在 `logs` 目录下生成日志文件：
+
+- `trends_YYYY-MM-DD_HH-MM-SS.log` - 数据获取脚本的日志
+- `feishu_YYYY-MM-DD_HH-MM-SS.log` - 飞书发送脚本的日志
+
+这样您可以轻松查看每次执行的详细情况，特别是当自动化运行时出现问题。
 
 ## 当前监控的热词
 
@@ -114,14 +147,30 @@
 
 如果您遇到问题，请检查：
 
-- 截图目录是否存在且权限正确
-- 飞书应用凭证是否正确配置
-- 飞书 Webhook 地址是否有效
-- 网络连接是否正常
-- 日志文件中的详细错误信息
+### 数据获取问题
+
+- **429 错误**：如果遇到 "Google returned a response with code 429" 错误，这表示请求过多。脚本已包含重试机制，但如果仍然失败，请等待几小时后再试或使用 `take_screenshots.py` 作为备选方案。
+- **中文字体问题**：如果图表中的中文显示不正确，请确保系统安装了支持中文的字体（如 Arial Unicode MS、SimHei 等）。
+- **目录权限**：确保 `google_trends_screenshots` 目录存在且有写入权限。
+
+### 飞书发送问题
+
+- **凭证配置**：确保 `feishu_sender.py` 中的 APP_ID 和 APP_SECRET 正确配置。
+- **Webhook 地址**：确认 FEISHU_WEBHOOK_URL 是有效的并且没有过期。
+- **图片上传失败**：检查图片文件名是否与 `TREND_GROUPS` 中的 `name` 字段一致。
+
+### 日志分析
+
+- 查看 `logs` 目录中的日志文件以获取详细错误信息。
+- 如果使用 cron 任务，请检查 cron 日志以确认脚本是否按计划执行。
+
+### 网络问题
+
+- 确保服务器可以访问 Google Trends 和飞书 API。
+- 如果使用代理，请确认代理配置正确。
 
 ## 维护
 
-- **更新热词**：同时修改两个脚本中的 `TREND_GROUPS` 列表
+- **更新热词**：同时修改 `trends_api.py` 和 `take_screenshots.py` 中的 `TREND_GROUPS` 列表
 - **更新凭证**：直接修改 `feishu_sender.py` 中的配置变量
-- **依赖更新**：定期运行 `pip3 install --upgrade playwright requests requests_toolbelt`
+- **依赖更新**：定期运行 `pip3 install --upgrade pytrends pandas matplotlib seaborn requests requests_toolbelt playwright`

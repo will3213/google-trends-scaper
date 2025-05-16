@@ -1,0 +1,410 @@
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 27169 (\N{CJK UNIFIED IDEOGRAPH-6A21}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 22411 (\N{CJK UNIFIED IDEOGRAPH-578B}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 27169 (\N{CJK UNIFIED IDEOGRAPH-6A21}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 22411 (\N{CJK UNIFIED IDEOGRAPH-578B}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 27169 (\N{CJK UNIFIED IDEOGRAPH-6A21}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 22411 (\N{CJK UNIFIED IDEOGRAPH-578B}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 27169 (\N{CJK UNIFIED IDEOGRAPH-6A21}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 22411 (\N{CJK UNIFIED IDEOGRAPH-578B}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 21151 (\N{CJK UNIFIED IDEOGRAPH-529F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 21151 (\N{CJK UNIFIED IDEOGRAPH-529F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 33021 (\N{CJK UNIFIED IDEOGRAPH-80FD}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 35789 (\N{CJK UNIFIED IDEOGRAPH-8BCD}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 65306 (\N{FULLWIDTH COLON}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/venv/lib/python3.13/site-packages/pytrends/request.py:260: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  df = df.fillna(False)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:136: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.tight_layout()
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26085 (\N{CJK UNIFIED IDEOGRAPH-65E5}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 26399 (\N{CJK UNIFIED IDEOGRAPH-671F}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 25628 (\N{CJK UNIFIED IDEOGRAPH-641C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 32034 (\N{CJK UNIFIED IDEOGRAPH-7D22}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20852 (\N{CJK UNIFIED IDEOGRAPH-5174}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 36259 (\N{CJK UNIFIED IDEOGRAPH-8DA3}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 30456 (\N{CJK UNIFIED IDEOGRAPH-76F8}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 23545 (\N{CJK UNIFIED IDEOGRAPH-5BF9}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+/Users/willhu/Desktop/google-trends-scraper/trends_api.py:137: UserWarning: Glyph 20540 (\N{CJK UNIFIED IDEOGRAPH-503C}) missing from font(s) Arial.
+  plt.savefig(chart_path, dpi=100)
+开始运行 Google Trends 数据获取脚本 - 2025-05-16 17:19:17
+连接到 Google Trends...
+处理组 1/8: chatgpt
+关键词: chatgpt
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/chatgpt.png
+等待 26.53 秒...
+处理组 2/8: chat模型词：Claude/deepseek/gemini/grok
+关键词: Claude, deepseek, gemini, grok
+等待 36.71 秒...
+获取 chat模型词：Claude/deepseek/gemini/grok 数据时出错: The request failed: Google returned a response with code 429
+遇到限制，等待 129.58 秒后重试...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/chat_models_Claude_deepseek_gemini_grok.png
+等待 25.89 秒...
+处理组 3/8: ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI
+关键词: Kling AI, Pika AI, Hailuo AI, Runway AI
+等待 20.70 秒...
+获取 ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI 数据时出错: The request failed: Google returned a response with code 429
+遇到限制，等待 125.64 秒后重试...
+获取 ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI 数据时出错: The request failed: Google returned a response with code 429
+遇到限制，等待 242.49 秒后重试...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/ai_video_models_Kling_Pika_Hailuo_Runway.png
+等待 23.30 秒...
+处理组 4/8: 功能词：ai translate/ai write/chatpdf
+关键词: ai translate, ai write, chatpdf
+等待 43.26 秒...
+获取 功能词：ai translate/ai write/chatpdf 数据时出错: The request failed: Google returned a response with code 429
+遇到限制，等待 125.71 秒后重试...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/function_terms_ai_translate_ai_write_chatpdf.png
+等待 49.59 秒...
+处理组 5/8: ai video/ai image/animation
+关键词: ai video, ai image, animation
+等待 22.91 秒...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/ai_video_ai_image_animation.png
+等待 47.16 秒...
+处理组 6/8: gpt 4o
+关键词: gpt 4o
+等待 39.08 秒...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/gpt_4o.png
+等待 56.56 秒...
+处理组 7/8: AI agent词：Manus/devin/genspark/lovable
+关键词: Manus, devin, genspark, lovable
+等待 32.62 秒...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/ai_agent_terms_Manus_devin_genspark_lovable.png
+等待 56.46 秒...
+处理组 8/8: lovart/flowith/fellou/deepwiki
+关键词: lovart, flowith, fellou, deepwiki
+等待 35.03 秒...
+图表已保存到: /Users/willhu/Desktop/google_trends_screenshots/lovart_flowith_fellou_deepwiki.png
+所有趋势数据处理完成。
+脚本执行完成 - 2025-05-16 18:20:21
