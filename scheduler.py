@@ -86,8 +86,16 @@ def wait_until_next_run(target_hour=9, target_minute=0):
     
     # 显示服务器当前时区信息
     local_now = datetime.datetime.now()
+    local_now_aware = datetime.datetime.now().replace(tzinfo=datetime.timezone.utc).astimezone()
+    china_now = datetime.datetime.now(china_tz)
+    
+    # 计算时差（小时）
+    time_diff_hours = (china_now.replace(tzinfo=None) - local_now.replace(tzinfo=None)).total_seconds() / 3600
+    
     logger.info(f"服务器当前时间: {local_now.strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"服务器与东八区时差: {(now - local_now.astimezone(china_tz)).total_seconds() / 3600:.2f}小时")
+    logger.info(f"服务器时区: {local_now_aware.tzinfo}")
+    logger.info(f"东八区时间: {china_now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"服务器与东八区时差: {time_diff_hours:.2f}小时")
     
     return wait_seconds
 
