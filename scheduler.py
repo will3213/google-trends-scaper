@@ -7,6 +7,7 @@ import datetime
 import subprocess
 import logging
 import sys
+import pytz
 from pathlib import Path
 
 # 配置日志
@@ -56,9 +57,16 @@ def run_workflow():
 def wait_until_next_run(target_hour=9, target_minute=0):
     """
     等待直到下一个指定的运行时间
-    默认为每天早上9:00（24小时制中的9点，即上午9点）
+    默认为每天东八区（北京/上海时间）早上9:00
+    无论服务器在哪个时区，都会在东八区的早上9点运行
     """
-    now = datetime.datetime.now()
+    # 使用东八区时间
+    china_tz = pytz.timezone('Asia/Shanghai')  # 东八区时间区
+    
+    # 获取当前的东八区时间
+    now = datetime.datetime.now(china_tz)
+    
+    # 设置目标时间为东八区的早上9点
     target_time = now.replace(hour=target_hour, minute=target_minute, second=0, microsecond=0)
     
     # 如果当前时间已经过了今天的目标时间，则设置为明天的目标时间
@@ -68,13 +76,18 @@ def wait_until_next_run(target_hour=9, target_minute=0):
     # 计算等待时间（秒）
     wait_seconds = (target_time - now).total_seconds()
     
-    logger.info(f"当前时间: {now.strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"下次运行时间: {target_time.strftime('%Y-%m-%d %H:%M:%S')} (上午9点)")
+    logger.info(f"当前东八区时间: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"下次运行时间(东八区): {target_time.strftime('%Y-%m-%d %H:%M:%S')} (上午9点)")
     logger.info(f"等待时间: {wait_seconds/3600:.2f}小时")
     
     # 添加更明确的日志信息
     am_pm = "上午" if target_hour < 12 else "下午"
-    logger.info(f"脚本设置为每天{am_pm}{target_hour % 12 or 12}点{target_minute:02d}分运行")
+    logger.info(f"脚本设置为每天东八区(北京/上海时间){am_pm}{target_hour % 12 or 12}点{target_minute:02d}分运行")
+    
+    # 显示服务器当前时区信息
+    local_now = datetime.datetime.now()
+    logger.info(f"服务器当前时间: {local_now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"服务器与东八区时差: {(now - local_now.astimezone(china_tz)).total_seconds() / 3600:.2f}小时")
     
     return wait_seconds
 
