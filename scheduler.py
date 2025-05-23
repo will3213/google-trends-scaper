@@ -56,7 +56,7 @@ def run_workflow():
 def wait_until_next_run(target_hour=9, target_minute=0):
     """
     等待直到下一个指定的运行时间
-    默认为每天早上9:00
+    默认为每天早上9:00（24小时制中的9点，即上午9点）
     """
     now = datetime.datetime.now()
     target_time = now.replace(hour=target_hour, minute=target_minute, second=0, microsecond=0)
@@ -69,8 +69,12 @@ def wait_until_next_run(target_hour=9, target_minute=0):
     wait_seconds = (target_time - now).total_seconds()
     
     logger.info(f"当前时间: {now.strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"下次运行时间: {target_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"下次运行时间: {target_time.strftime('%Y-%m-%d %H:%M:%S')} (上午9点)")
     logger.info(f"等待时间: {wait_seconds/3600:.2f}小时")
+    
+    # 添加更明确的日志信息
+    am_pm = "上午" if target_hour < 12 else "下午"
+    logger.info(f"脚本设置为每天{am_pm}{target_hour % 12 or 12}点{target_minute:02d}分运行")
     
     return wait_seconds
 
