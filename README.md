@@ -25,7 +25,9 @@
 ### 目录结构
 
 - `logs/` - 存储执行日志和备份的趋势图片
+- `screenshots/` - 存储生成的趋势图表
 - `backup_scripts/` - 存储旧版本或不再使用的脚本（仅供参考）
+- `venv/` - Python虚拟环境（推荐使用）
 
 ## 系统需求
 
@@ -56,16 +58,16 @@
    pip install pytrends pandas matplotlib seaborn requests requests_toolbelt
    ```
 
-4. 创建截图保存目录
+4. 创建虚拟环境并安装依赖（推荐方式）
    ```bash
-   mkdir -p ~/Desktop/google_trends_screenshots
-   # 或修改脚本中的 SCREENSHOT_DIR 变量为您希望的路径
+   python3 -m venv venv
+   source venv/bin/activate  # 在 macOS/Linux 上
+   # 或
+   venv\Scripts\activate  # 在 Windows 上
+   pip install pytrends pandas matplotlib seaborn requests requests_toolbelt
    ```
 
-5. 创建日志目录
-   ```bash
-   mkdir -p logs
-   ```
+   脚本会自动创建所需的目录结构（`screenshots/`和`logs/`）
 
 ## 配置
 
@@ -90,7 +92,7 @@
 
 ### 推荐方式：使用工作流脚本
 
-使用工作流脚本可以确保数据获取和飞书发送按正确顺序执行：
+使用工作流脚本可以确保数据获取和飞书发送按正确顺序执行。脚本已配置为使用虚拟环境：
 
 ```bash
 # 运行完整工作流（数据获取 + 飞书发送 + 图片备份和清理）
@@ -107,15 +109,17 @@
 
 ### 分步手动运行
 
-如果您想分步手动运行，可以按以下顺序执行：
+如果您想分步手动运行，可以按以下顺序执行（建议使用虚拟环境）：
 
 1. 运行数据获取脚本
    ```bash
+   source venv/bin/activate  # 在 macOS/Linux 上
    python trends_api.py
    ```
 
 2. 运行飞书发送脚本
    ```bash
+   source venv/bin/activate  # 在 macOS/Linux 上
    python feishu_sender.py
    ```
 
@@ -125,8 +129,10 @@
 
 ```bash
 # 每日早上9:00执行完整工作流
-0 9 * * * /path/to/google-trends-scraper/run_trends_workflow.sh >> /path/to/cron_workflow.log 2>&1
+0 9 * * * cd /path/to/google-trends-scraper && ./run_trends_workflow.sh
 ```
+
+注意：脚本已配置为使用相对路径，所以需要先切换到项目目录再执行脚本。
 
 ## 日志和备份
 
@@ -160,7 +166,7 @@
 
 - **429 错误**：如果遇到 "Google returned a response with code 429" 错误，这表示请求过多。脚本已包含重试机制，但如果仍然失败，请等待几小时后再试。
 - **中文字体问题**：如果图表中的中文显示不正确，请确保系统安装了支持中文的字体（如 Arial Unicode MS、SimHei 等）。
-- **目录权限**：确保 `~/Desktop/google_trends_screenshots` 目录存在且有写入权限。
+- **目录权限**：确保脚本目录下的 `screenshots` 目录有写入权限。
 
 ### 飞书发送问题
 
@@ -189,8 +195,29 @@
 
 注意：两个文件中的 `name` 字段必须保持一致，以确保正确匹配图片文件。
 
+### 服务器部署
+
+项目已优化为更适合服务器部署：
+
+1. **目录结构**：所有文件都使用相对路径，图片和日志存储在项目目录下
+2. **虚拟环境**：使用Python虚拟环境管理依赖
+3. **自动创建目录**：脚本会自动创建所需的目录结构
+
+部署步骤：
+
+1. 将代码克隆到服务器：`git clone https://github.com/will3213/google-trends-scaper.git`
+2. 创建虚拟环境并安装依赖：
+   ```bash
+   cd google-trends-scaper
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install pytrends pandas matplotlib seaborn requests requests_toolbelt
+   ```
+3. 配置飞书凭证和Webhook
+4. 设置crontab定时任务
+
 ### 其他维护任务
 
 - **更新凭证**：直接修改 `feishu_sender.py` 中的 APP_ID、APP_SECRET 和 FEISHU_WEBHOOK_URL
-- **依赖更新**：定期运行 `pip install --upgrade pytrends pandas matplotlib seaborn requests requests_toolbelt`
+- **依赖更新**：定期运行 `source venv/bin/activate && pip install --upgrade pytrends pandas matplotlib seaborn requests requests_toolbelt`
 - **日志清理**：定期清理 `logs` 目录中的旧日志和备份图片，以节省磁盘空间
