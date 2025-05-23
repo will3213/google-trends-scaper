@@ -33,5 +33,7 @@ ENV/
 # Mac OS
 .DS_Store
 
-# Screenshots directory
+# Screenshots and logs directories
 /google_trends_screenshots/
+/screenshots/
+/logs/

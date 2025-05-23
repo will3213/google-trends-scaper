@@ -8,19 +8,21 @@ import re
 # --- Configuration (User will need to fill these) ---
 APP_ID = "cli_a8ac64648375100d"  # Replace with your Feishu App ID
 APP_SECRET = "1bE7tpruwApUkB9cViiyiecrNNjotNQ5"  # Replace with your Feishu App Secret
-FEISHU_WEBHOOK_URL = "https://open.feishu.cn/open-apis/bot/v2/hook/221bb6ff-af65-4f55-b639-6bb4ecf456c0" # Provided by user
-SCREENSHOT_DIR = os.path.join(os.path.expanduser("~"), "Desktop", "google_trends_screenshots")
+FEISHU_WEBHOOK_URL = "https://open.feishu.cn/open-apis/bot/v2/hook/7fae3ce0-7b6b-4822-ae29-58d84b8cb296" # Provided by user
+# 使用脚本所在目录下的screenshots文件夹
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCREENSHOT_DIR = os.path.join(SCRIPT_DIR, "screenshots")
 
 # From take_screenshots.py, ensure this matches
 TREND_GROUPS = [
-    {"name": "chatgpt", "description": "chatgpt", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=chatgpt&hl=zh-CN"},
-    {"name": "chat_models_Claude_deepseek_gemini_grok", "description": "chat模型词：Claude/deepseek/gemini/grok", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Claude,deepseek,gemini,grok&hl=zh-CN"},
-    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway", "description": "ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Kling%20AI,Pika%20AI,Hailuo%20AI,Runway%20AI&hl=zh-CN"},
-    {"name": "function_terms_ai_translate_ai_write_chatpdf", "description": "功能词：ai translate/ai write/chatpdf", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf&hl=zh-CN"},
-    {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
-    {"name": "gpt_4o", "description": "gpt 4o", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt%204o&hl=zh-CN"},
-    {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent词：Manus\\devin\\genspark\\lovable", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Manus,devin,genspark,lovable&hl=zh-CN"},
-    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart\\flowith\\fellou\\deepwiki", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki&hl=zh-CN"}
+    {"name": "chatgpt", "description": "ChatGPT 热度趋势（全球月搜索量 297M ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=chatgpt&hl=zh-CN"},
+    {"name": "chat_models_Claude_deepseek_gemini_grok_qwen", "description": "Chat 模型词热度趋势（claude 全球月搜索量 1.2M ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Claude,deepseek,gemini,grok,qwen&hl=zh-CN"},
+    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway_Veo", "description": "AI video 模型词热度趋势（kling 全球月搜索量 85K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Kling%20AI,Pika%20AI,Hailuo%20AI,Runway%20AI,Veo&hl=zh-CN"},
+    {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词热度趋势（ai translate 全球月搜索量 31K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
+    {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation 热度趋势（ai video 全球月搜索量 106K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
+    {"name": "gpt_4o", "description": "GPT 4o 热度趋势（gpt 4o 全球月搜索量 77K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt%204o&hl=zh-CN"},
+    {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent 词热度趋势（Manus 全球月搜索量 138K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Manus,devin,genspark,lovable&hl=zh-CN"},
+    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart/flowith/fellou/deepwiki 热度趋势（deepwiki 全球月搜索量 4.1K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki&hl=zh-CN"}
 ]
 
 def get_tenant_access_token(app_id, app_secret):
@@ -115,7 +117,7 @@ def upload_image_to_feishu(image_path, tenant_access_token):
 def prepare_feishu_message_content(trend_groups_with_keys):
     """Prepares the Feishu card message content."""
     today_date = datetime.date.today().strftime("%Y-%m-%d")
-    title = f"{today_date} Google trends 热词趋势查询"
+    title = f"{today_date} Google trends 广告热词趋势查询"
     
     # 创建卡片消息
     elements = []
@@ -143,7 +145,7 @@ def prepare_feishu_message_content(trend_groups_with_keys):
             "tag": "div",
             "text": {
                 "tag": "lark_md",
-                "content": f"**{cleaned_description}:**"
+                "content": f"**📊 {cleaned_description}**"
             }
         })
         
@@ -219,8 +221,9 @@ def main():
     screenshots_exist = False
     for group in TREND_GROUPS:
         filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
-        screenshot_path = os.path.join(SCREENSHOT_DIR, f"{filename_base}.png")
-        if os.path.exists(screenshot_path):
+        # 查找匹配的文件（支持带时间戳的文件名）
+        matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+        if matching_files:
             screenshots_exist = True
             break
     
@@ -246,14 +249,16 @@ def main():
         print("Message will be sent with placeholders or 'upload failed' messages for images.")
         for i, group in enumerate(TREND_GROUPS):
             filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
-            screenshot_path = os.path.join(SCREENSHOT_DIR, f"{filename_base}.png")
-            if os.path.exists(screenshot_path):
+            # 查找匹配的文件（支持带时间戳的文件名）
+            matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+            if matching_files:
+                screenshot_path = os.path.join(SCREENSHOT_DIR, matching_files[0])  # 使用找到的第一个匹配文件
                 trend_groups_for_message.append({
                     "description": group["description"],
                     "image_key": f"mock_image_key_for_{filename_base}" # Placeholder
                 })
             else:
-                print(f"Screenshot not found for group {group['name']} at {screenshot_path}")
+                print(f"Screenshot not found for group {group['name']} in {SCREENSHOT_DIR}")
                 trend_groups_for_message.append({
                     "description": group["description"],
                     "image_key": None # Actual upload would fail
@@ -265,15 +270,17 @@ def main():
             print(f"Tenant access token obtained: {token[:10]}...")
             for group in TREND_GROUPS:
                 filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
-                image_file = f"{filename_base}.png"
-                image_path = os.path.join(SCREENSHOT_DIR, image_file)
+                # 查找匹配的文件（支持带时间戳的文件名）
+                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
                 
                 image_key_to_use = None
-                if os.path.exists(image_path):
+                if matching_files:
+                    image_file = matching_files[0]  # 使用找到的第一个匹配文件
+                    image_path = os.path.join(SCREENSHOT_DIR, image_file)
                     print(f"Uploading {image_file}...")
                     image_key_to_use = upload_image_to_feishu(image_path, token)
                 else:
-                    print(f"Screenshot not found: {image_path}")
+                    print(f"Screenshot not found for group {group['name']} in {SCREENSHOT_DIR}")
                 
                 trend_groups_for_message.append({
                     "description": group["description"],
@@ -284,8 +291,9 @@ def main():
             print("Message will be sent with placeholders or 'upload failed' messages for images.")
             for i, group in enumerate(TREND_GROUPS):
                 filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
-                screenshot_path = os.path.join(SCREENSHOT_DIR, f"{filename_base}.png")
-                if os.path.exists(screenshot_path):
+                # 查找匹配的文件（支持带时间戳的文件名）
+                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+                if matching_files:
                     trend_groups_for_message.append({
                         "description": group["description"],
                         "image_key": f"mock_image_key_for_{filename_base}_no_token" # Placeholder

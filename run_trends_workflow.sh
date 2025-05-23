@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # 设置工作目录
-SCRIPT_DIR="/Users/willhu/Desktop/google-trends-scraper"
+# 使用脚本所在目录作为基准目录
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOG_DIR="${SCRIPT_DIR}/logs"
-SCREENSHOT_DIR="$(cd ~ && pwd)/Desktop/google_trends_screenshots"
+SCREENSHOT_DIR="${SCRIPT_DIR}/screenshots"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 
-# 创建日志目录
+# 创建日志目录和截图目录
 mkdir -p "$LOG_DIR"
+mkdir -p "$SCREENSHOT_DIR"
 
 # 日志文件
 TRENDS_LOG="${LOG_DIR}/trends_${TIMESTAMP}.log"
@@ -18,7 +20,8 @@ echo "===== Google Trends 工作流开始执行 - $(date) ====="
 # 步骤 1: 运行 trends_api.py 获取数据
 echo "开始执行数据获取脚本..."
 cd "$SCRIPT_DIR"
-python3 "$SCRIPT_DIR/trends_api.py" > "$TRENDS_LOG" 2>&1
+source "$SCRIPT_DIR/venv/bin/activate"
+"$SCRIPT_DIR/venv/bin/python3" "$SCRIPT_DIR/trends_api.py" > "$TRENDS_LOG" 2>&1
 
 # 检查第一个脚本的执行状态
 if [ $? -eq 0 ]; then
@@ -26,7 +29,7 @@ if [ $? -eq 0 ]; then
     
     # 步骤 2: 运行 feishu_sender.py 发送数据到飞书
     echo "开始执行飞书发送脚本..."
-    python3 "$SCRIPT_DIR/feishu_sender.py" > "$FEISHU_LOG" 2>&1
+    "$SCRIPT_DIR/venv/bin/python3" "$SCRIPT_DIR/feishu_sender.py" > "$FEISHU_LOG" 2>&1
     
     if [ $? -eq 0 ]; then
         echo "飞书发送脚本执行成功，日志保存在: $FEISHU_LOG"

@@ -17,7 +17,9 @@ plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'SimHei', 'Microsoft YaHe
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # 配置
-SCREENSHOT_DIR = os.path.join(os.path.expanduser("~"), "Desktop", "google_trends_screenshots")
+# 使用脚本所在目录下的screenshots文件夹
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCREENSHOT_DIR = os.path.join(SCRIPT_DIR, "screenshots")
 
 # 重试配置
 MAX_RETRIES = 3  # 最大重试次数
@@ -27,9 +29,9 @@ MAX_WAIT_TIME = 300  # 最大等待时间（秒）
 # 与 take_screenshots.py 保持一致的趋势组
 TREND_GROUPS = [
     {"name": "chatgpt", "description": "chatgpt", "keywords": ["chatgpt"]},
-    {"name": "chat_models_Claude_deepseek_gemini_grok", "description": "chat模型词：Claude/deepseek/gemini/grok", "keywords": ["Claude", "deepseek", "gemini", "grok"]},
-    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway", "description": "ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI", "keywords": ["Kling AI", "Pika AI", "Hailuo AI", "Runway AI"]},
-    {"name": "function_terms_ai_translate_ai_write_chatpdf", "description": "功能词：ai translate/ai write/chatpdf", "keywords": ["ai translate", "ai write", "chatpdf"]},
+    {"name": "chat_models_Claude_deepseek_gemini_grok_qwen", "description": "chat模型词：Claude/deepseek/gemini/grok/qwen", "keywords": ["Claude", "deepseek", "gemini", "grok", "qwen"]},
+    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway_Veo", "description": "ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI/Veo AI", "keywords": ["Kling AI", "Pika AI", "Hailuo AI", "Runway AI", "Veo AI"]},
+    {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词：ai translate/ai write/chatpdf/ai content detector/pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
     {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation", "keywords": ["ai video", "ai image", "animation"]},
     {"name": "gpt_4o", "description": "gpt 4o", "keywords": ["gpt 4o"]},
     {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent词：Manus/devin/genspark/lovable", "keywords": ["Manus", "devin", "genspark", "lovable"]},
@@ -72,7 +74,7 @@ def get_trends_data():
     }
     
     # 创建 TrendReq 实例，添加请求头
-    pytrends = TrendReq(hl='zh-CN', tz=480, timeout=(10, 25),
+    pytrends = TrendReq(hl='zh-CN', tz=480, timeout=(30, 45),
                         requests_args={'headers': request_headers})
     
     successful_requests = 0
@@ -158,7 +160,7 @@ def get_trends_data():
                         # 尝试重新创建 pytrends 实例，使用不同的请求头
                         new_user_agent = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{random.randint(90, 122)}.0.0.0 Safari/537.36"
                         request_headers['User-Agent'] = new_user_agent
-                        pytrends = TrendReq(hl='zh-CN', tz=480, timeout=(10, 25),
+                        pytrends = TrendReq(hl='zh-CN', tz=480, timeout=(30, 45),
                                            requests_args={'headers': request_headers})
                     else:
                         print(f"达到最大重试次数，跳过 {group_description}")
