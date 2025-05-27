@@ -35,7 +35,8 @@ TREND_GROUPS = [
     {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation", "keywords": ["ai video", "ai image", "animation"]},
     {"name": "gpt_4o", "description": "gpt 4o", "keywords": ["gpt 4o"]},
     {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent词：Manus/devin/genspark/lovable", "keywords": ["Manus", "devin", "genspark", "lovable"]},
-    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart/flowith/fellou/deepwiki", "keywords": ["lovart", "flowith", "fellou", "deepwiki"]}
+    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart/flowith/fellou/deepwiki", "keywords": ["lovart", "flowith", "fellou", "deepwiki"]},
+    {"name": "cursor_windsurf_codex", "description": "cursor/windsurf/codex", "keywords": ["cursor", "windsurf", "codex"]}
 ]
 
 def sanitize_filename(name):
