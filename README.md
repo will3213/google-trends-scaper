@@ -157,6 +157,57 @@
 - GPT 4o 热度趋势
 - AI agent 词热度趋势：Manus/devin/genspark/lovable
 - lovart/flowith/fellou/deepwiki 热度趋势
+- cursor/windsurf/codex 热度趋势（cursor 全球月搜索量 301K）
+
+## 更新日志
+
+### 2025-05-27
+- 添加新的关键词组：cursor/windsurf/codex
+- cursor 全球月搜索量为 301K
+
+## 服务器部署
+
+本项目已部署在 Vultr 服务器上，配置如下：
+
+- 服务器位置：Tokyo
+- 操作系统：Ubuntu 22.04 x64
+- 配置：1 vCPU, 1024.00 MB RAM, 25 GB NVMe存储
+- 项目路径：~/google-trends-scaper
+
+### 服务器更新步骤
+
+1. SSH 连接到服务器：
+   ```bash
+   ssh root@45.77.129.59
+   ```
+
+2. 进入项目目录：
+   ```bash
+   cd ~/google-trends-scaper
+   ```
+
+3. 停止当前运行的进程：
+   ```bash
+   # 查找进程 ID
+   ps aux | grep python
+   # 停止进程（替换PID为实际进程 ID）
+   kill PID
+   ```
+
+4. 拉取最新代码：
+   ```bash
+   git pull
+   ```
+
+5. 重新启动调度器：
+   ```bash
+   nohup python3 scheduler.py > scheduler.log 2>&1 &
+   ```
+
+6. 确认进程已重新启动：
+   ```bash
+   ps aux | grep python
+   ```
 
 ## 故障排除
 
