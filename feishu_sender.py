@@ -21,8 +21,8 @@ TREND_GROUPS = [
     {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词热度趋势（ai translate 全球月搜索量 31K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
     {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation 热度趋势（ai video 全球月搜索量 106K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
     {"name": "gpt_4o", "description": "GPT 4o 热度趋势（gpt 4o 全球月搜索量 77K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt%204o&hl=zh-CN"},
-    {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent 词热度趋势（Manus 全球月搜索量 138K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Manus,devin,genspark,lovable&hl=zh-CN"},
-    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart/flowith/fellou/deepwiki 热度趋势（deepwiki 全球月搜索量 4.1K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki&hl=zh-CN"},
+    {"name": "ai_agent_terms_Manus_genspark_lovable", "description": "AI agent 词热度趋势（Manus 全球月搜索量 138K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Manus,genspark,lovable&hl=zh-CN"},
+    {"name": "lovart_flowith_fellou_deepwiki_devin_ai", "description": "lovart/flowith/fellou/deepwiki/devin ai 热度趋势（deepwiki 全球月搜索量 4.1K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki,devin%20ai&hl=zh-CN"},
     {"name": "cursor_windsurf_codex", "description": "cursor/windsurf/codex 热度趋势（cursor 全球月搜索量 301K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=cursor,windsurf,codex&hl=zh-CN"}
 ]
 

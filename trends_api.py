@@ -34,8 +34,8 @@ TREND_GROUPS = [
     {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词：ai translate/ai write/chatpdf/ai content detector/pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
     {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation", "keywords": ["ai video", "ai image", "animation"]},
     {"name": "gpt_4o", "description": "gpt 4o", "keywords": ["gpt 4o"]},
-    {"name": "ai_agent_terms_Manus_devin_genspark_lovable", "description": "AI agent词：Manus/devin/genspark/lovable", "keywords": ["Manus", "devin", "genspark", "lovable"]},
-    {"name": "lovart_flowith_fellou_deepwiki", "description": "lovart/flowith/fellou/deepwiki", "keywords": ["lovart", "flowith", "fellou", "deepwiki"]},
+    {"name": "ai_agent_terms_Manus_genspark_lovable", "description": "AI agent词：Manus/genspark/lovable", "keywords": ["Manus", "genspark", "lovable"]},
+    {"name": "lovart_flowith_fellou_deepwiki_devin_ai", "description": "lovart/flowith/fellou/deepwiki/devin ai", "keywords": ["lovart", "flowith", "fellou", "deepwiki", "devin ai"]},
     {"name": "cursor_windsurf_codex", "description": "cursor/windsurf/codex", "keywords": ["cursor", "windsurf", "codex"]}
 ]
 
