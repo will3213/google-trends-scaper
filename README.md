@@ -148,18 +148,25 @@
 
 当前系统监控以下 AI 相关热词的搜索趋势：
 
-- ChatGPT 热度趋势（全球搜索量 297M）
-- Chat 模型词热度趋势：Claude/deepseek/gemini/grok/qwen
-- AI 图像模型热度趋势：dalle/stable diffusion/flux
-- AI video 模型词热度趋势：Kling AI/Pika AI/Hailuo AI/Runway AI/Veo
-- 功能词热度趋势：ai translate/ai write/chatpdf/ai content detector/pdf translator
-- ai video/ai image/animation 热度趋势
-- GPT 4o 热度趋势
-- AI agent 词热度趋势：Manus/devin/genspark/lovable
-- lovart/flowith/fellou/deepwiki 热度趋势
-- cursor/windsurf/codex 热度趋势（cursor 全球月搜索量 301K）
+1. **ChatGPT** 热度趋势（全球月搜索量 297M）
+2. **GPT4o** 热度趋势（全球月搜索量 77K）
+3. **Chat 模型词**：claude, deepseek, gemini, grok, qwen（claude 全球月搜索量 1.2M）
+4. **AI 视频模型**：kling ai, pika ai, hailuo ai, veo ai, pixverse（kling ai 全球月搜索量 85K）
+5. **AI 功能词**：ai translate, ai write, chatpdf, ai content detector, pdf translator（ai translate 全球月搜索量 31K）
+6. **AI 创意工具**：ai video, ai image, animation（ai video 全球月搜索量 106K）
+7. **AI 代理工具**：manus, genspark, lovable, cursor, n8n（manus 全球月搜索量 780K）
+8. **AI 平台**：poe, perplexity, notebooklm（poe 全球月搜索量 450K）
+9. **代理工具**：lovart, flowith, fellou, deepwiki, devin ai（deepwiki 全球月搜索量 4.1K）
+10. **开发工具**：windsurf, codex, v0, zapier, coze（windsurf 全球月搜索量 27K）
 
 ## 更新日志
+
+### 2025-06-04
+- 重组所有监控关键词组，更清晰地分类和命名
+- 添加新关键词：cursor、n8n、zapier、coze
+- 更新各关键词组的搜索量数据
+- 重命名部分组别："ai_agent" 改为 "ai_agent"，"ai_tools" 改为 "agentic_tools"
+- 添加新组别 "dev_tools"
 
 ### 2025-05-27
 - 添加新的关键词组：cursor/windsurf/codex

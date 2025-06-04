@@ -16,14 +16,15 @@ SCREENSHOT_DIR = os.path.join(SCRIPT_DIR, "screenshots")
 # From take_screenshots.py, ensure this matches
 TREND_GROUPS = [
     {"name": "chatgpt", "description": "ChatGPT 热度趋势（全球月搜索量 297M ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=chatgpt&hl=zh-CN"},
-    {"name": "chat_models_Claude_deepseek_gemini_grok_qwen", "description": "Chat 模型词热度趋势（claude 全球月搜索量 1.2M ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Claude,deepseek,gemini,grok,qwen&hl=zh-CN"},
-    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway_Veo", "description": "AI video 模型词热度趋势（kling 全球月搜索量 85K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Kling%20AI,Pika%20AI,Hailuo%20AI,Runway%20AI,Veo&hl=zh-CN"},
-    {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词热度趋势（ai translate 全球月搜索量 31K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
-    {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation 热度趋势（ai video 全球月搜索量 106K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
-    {"name": "gpt_4o", "description": "GPT 4o 热度趋势（gpt 4o 全球月搜索量 77K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt%204o&hl=zh-CN"},
-    {"name": "ai_agent_terms_Manus_genspark_lovable", "description": "AI agent 词热度趋势（Manus 全球月搜索量 138K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=Manus,genspark,lovable&hl=zh-CN"},
-    {"name": "lovart_flowith_fellou_deepwiki_devin_ai", "description": "lovart/flowith/fellou/deepwiki/devin ai 热度趋势（deepwiki 全球月搜索量 4.1K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki,devin%20ai&hl=zh-CN"},
-    {"name": "cursor_windsurf_codex", "description": "cursor/windsurf/codex 热度趋势（cursor 全球月搜索量 301K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=cursor,windsurf,codex&hl=zh-CN"}
+    {"name": "gpt4o", "description": "GPT4o 热度趋势（全球月搜索量 77K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt4o&hl=zh-CN"},
+    {"name": "chat_models", "description": "Claude,Deepseek,Gemini,Grok,Qwen 热度趋势（claude 全球月搜索量 1.2M ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=claude,deepseek,gemini,grok,qwen&hl=zh-CN"},
+    {"name": "ai_video_models", "description": "Kling AI,Pika AI,Hailuo AI,Veo AI,Pixverse 热度趋势（kling ai 全球月搜索量 85K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=kling%20ai,pika%20ai,hailuo%20ai,veo%20ai,pixverse&hl=zh-CN"},
+    {"name": "ai_features", "description": "AI Translate,AI Write,ChatPDF,AI Content Detector,PDF Translator 热度趋势（ai translate 全球月搜索量 31K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
+    {"name": "ai_creative", "description": "AI Video,AI Image,Animation 热度趋势（ai video 全球月搜索量 106K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
+    {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势（manus 全球月搜索量 138K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
+    {"name": "ai_platforms", "description": "Poe,Perplexity,NotebookLM 热度趋势（poe 全球月搜索量 450K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe,perplexity,notebooklm&hl=zh-CN"},
+    {"name": "ai_tools", "description": "Lovart,Flowith,Fellou,Deepwiki,Devin AI 热度趋势（deepwiki 全球月搜索量 4.1K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki,devin%20ai&hl=zh-CN"},
+    {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Coze 热度趋势（windsurf 全球月搜索量 27K ）", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,coze&hl=zh-CN"}
 ]
 
 def get_tenant_access_token(app_id, app_secret):

@@ -29,14 +29,15 @@ MAX_WAIT_TIME = 300  # 最大等待时间（秒）
 # 与 take_screenshots.py 保持一致的趋势组
 TREND_GROUPS = [
     {"name": "chatgpt", "description": "chatgpt", "keywords": ["chatgpt"]},
-    {"name": "chat_models_Claude_deepseek_gemini_grok_qwen", "description": "chat模型词：Claude/deepseek/gemini/grok/qwen", "keywords": ["Claude", "deepseek", "gemini", "grok", "qwen"]},
-    {"name": "ai_video_models_Kling_Pika_Hailuo_Runway_Veo", "description": "ai video 模型词：Kling AI/Pika AI/Hailuo AI/Runway AI/Veo AI", "keywords": ["Kling AI", "Pika AI", "Hailuo AI", "Runway AI", "Veo AI"]},
-    {"name": "features_terms_ai_translate_ai_write_chatpdf_ai_content_detector_pdf_translator", "description": "功能词：ai translate/ai write/chatpdf/ai content detector/pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
-    {"name": "ai_video_ai_image_animation", "description": "ai video/ai image/animation", "keywords": ["ai video", "ai image", "animation"]},
-    {"name": "gpt_4o", "description": "gpt 4o", "keywords": ["gpt 4o"]},
-    {"name": "ai_agent_terms_Manus_genspark_lovable", "description": "AI agent词：Manus/genspark/lovable", "keywords": ["Manus", "genspark", "lovable"]},
-    {"name": "lovart_flowith_fellou_deepwiki_devin_ai", "description": "lovart/flowith/fellou/deepwiki/devin ai", "keywords": ["lovart", "flowith", "fellou", "deepwiki", "devin ai"]},
-    {"name": "cursor_windsurf_codex", "description": "cursor/windsurf/codex", "keywords": ["cursor", "windsurf", "codex"]}
+    {"name": "gpt4o", "description": "gpt4o", "keywords": ["gpt4o"]},
+    {"name": "chat_models", "description": "claude,deepseek,gemini,grok,qwen", "keywords": ["claude", "deepseek", "gemini", "grok", "qwen"]},
+    {"name": "ai_video_models", "description": "kling ai,pika ai,hailuo ai,veo ai,pixverse", "keywords": ["kling ai", "pika ai", "hailuo ai", "veo ai", "pixverse"]},
+    {"name": "ai_features", "description": "ai translate,ai write,chatpdf,ai content detector,pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
+    {"name": "ai_creative", "description": "ai video,ai image,animation", "keywords": ["ai video", "ai image", "animation"]},
+    {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
+    {"name": "ai_platforms", "description": "poe,perplexity,notebooklm", "keywords": ["poe", "perplexity", "notebooklm"]},
+    {"name": "ai_tools", "description": "lovart,flowith,fellou,deepwiki,devin ai", "keywords": ["lovart", "flowith", "fellou", "deepwiki", "devin ai"]},
+    {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,coze", "keywords": ["windsurf", "codex", "v0", "zapier", "coze"]}
 ]
 
 def sanitize_filename(name):
