@@ -22,7 +22,7 @@ TREND_GROUPS = [
     {"name": "ai_features", "description": "AI Translate,AI Write,ChatPDF,AI Content Detector,PDF Translator 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
     {"name": "ai_creative", "description": "AI Video,AI Image,Animation 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
     {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
-    {"name": "ai_platforms", "description": "Poe,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
+    {"name": "ai_platforms", "description": "Poe AI,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe%20ai,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
     {"name": "ai_tools", "description": "Lovart,Flowith,Fellou,Deepwiki,Devin AI 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki,devin%20ai&hl=zh-CN"},
     {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Coze 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,coze&hl=zh-CN"},
     {"name": "ai_image_models", "description": "Sora,Midjourney,Runway,Freepik 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=sora,midjourney,runway,freepik&hl=zh-CN"},

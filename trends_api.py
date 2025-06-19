@@ -35,7 +35,7 @@ TREND_GROUPS = [
     {"name": "ai_features", "description": "ai translate,ai write,chatpdf,ai content detector,pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
     {"name": "ai_creative", "description": "ai video,ai image,animation", "keywords": ["ai video", "ai image", "animation"]},
     {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
-    {"name": "ai_platforms", "description": "poe,perplexity,notebooklm,notion,gamma", "keywords": ["poe", "perplexity", "notebooklm", "notion", "gamma"]},
+    {"name": "ai_platforms", "description": "poe ai,perplexity,notebooklm,notion,gamma", "keywords": ["poe ai", "perplexity", "notebooklm", "notion", "gamma"]},
     {"name": "ai_tools", "description": "lovart,flowith,fellou,deepwiki,devin ai", "keywords": ["lovart", "flowith", "fellou", "deepwiki", "devin ai"]},
     {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,coze", "keywords": ["windsurf", "codex", "v0", "zapier", "coze"]},
     {"name": "ai_image_models", "description": "sora,midjourney,runway,freepik", "keywords": ["sora", "midjourney", "runway", "freepik"]},
