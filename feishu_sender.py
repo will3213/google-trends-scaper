@@ -3,6 +3,7 @@ import json
 import os
 from requests_toolbelt import MultipartEncoder
 import datetime
+import urllib.parse
 import re
 
 # --- Configuration (User will need to fill these) ---
@@ -167,6 +168,10 @@ def prepare_feishu_message_content(trend_groups_with_keys):
                     "content": cleaned_description
                 }
             })
+            
+        # 添加快捷链接（近7日/30日/90日）
+
+
         else:
             elements.append({
                 "tag": "div",
@@ -174,6 +179,26 @@ def prepare_feishu_message_content(trend_groups_with_keys):
                     "tag": "plain_text",
                     "content": "(图片上传失败)"
                 }
+            })
+        
+        # 添加快捷链接（近7日/30日/90日）
+        original_url = group_info.get('url')
+        if original_url:
+            def _build_alt(u, date_param):
+                if 'date=' in u:
+                    return re.sub(r'date=[^&]+', f'date={date_param}', u)
+                else:
+                    sep = '&' if '?' in u else '?'
+                    return f"{u}{sep}date={date_param}"
+            url_7  = _build_alt(original_url, 'now%207-d')
+            url_30 = _build_alt(original_url, 'today%201-m')
+            url_90 = _build_alt(original_url, 'today%203-m')
+            elements.append({
+                "tag": "note",
+                "elements": [{
+                    "tag": "lark_md",
+                    "content": f"[近7日]({url_7}) / [近30日]({url_30}) / [近90日]({url_90})"
+                }]
             })
         
         # 添加分割线
@@ -236,18 +261,21 @@ def main():
             break
     
     if not screenshots_exist:
-        print(f"No screenshots found in {SCREENSHOT_DIR}. Please run the screenshot script first.")
-        # Attempt to send a message indicating no screenshots
-        error_message_content = prepare_feishu_message_content([
-            {"description": "错误提示", "image_key": None},
-            {"description": f"在 {SCREENSHOT_DIR} 未找到截图文件，请先运行截图脚本。", "image_key": None}
-        ])
+        print(f"No screenshots found in {SCREENSHOT_DIR}. Will send card without images.")
+        trend_groups_for_message = []
+        for group in TREND_GROUPS:
+            trend_groups_for_message.append({
+                "description": group["description"],
+                "image_key": None,
+                "url": group["url"]
+            })
+        message_body = prepare_feishu_message_content(trend_groups_for_message)
         if FEISHU_WEBHOOK_URL:
-            print("Sending error message about missing screenshots to Feishu...")
-            send_message_to_feishu_webhook(FEISHU_WEBHOOK_URL, error_message_content)
+            print("Sending placeholder card without images to Feishu...")
+            send_message_to_feishu_webhook(FEISHU_WEBHOOK_URL, message_body)
         else:
-            print("FEISHU_WEBHOOK_URL is not configured. Cannot send error message.")
-        print("Feishu script finished due to missing screenshots.")
+            print("FEISHU_WEBHOOK_URL is not configured. Cannot send message.")
+        print("Feishu script finished (sent card without screenshots).")
         return
 
     trend_groups_for_message = []
@@ -263,13 +291,15 @@ def main():
                 screenshot_path = os.path.join(SCREENSHOT_DIR, matching_files[0])  # 使用找到的第一个匹配文件
                 trend_groups_for_message.append({
                     "description": group["description"],
-                    "image_key": f"mock_image_key_for_{filename_base}" # Placeholder
+                    "image_key": f"mock_image_key_for_{filename_base}", # Placeholder
+                    "url": group["url"]
                 })
             else:
                 print(f"Screenshot not found for group {group['name']} in {SCREENSHOT_DIR}")
                 trend_groups_for_message.append({
                     "description": group["description"],
-                    "image_key": None # Actual upload would fail
+                    "image_key": None, # Actual upload would fail
+                    "url": group["url"]
                 })
     else:
         print(f"Attempting to get tenant_access_token with APP_ID: {APP_ID[:5]}...")
@@ -292,7 +322,8 @@ def main():
                 
                 trend_groups_for_message.append({
                     "description": group["description"],
-                    "image_key": image_key_to_use
+                    "image_key": image_key_to_use,
+                    "url": group["url"]
                 })
         else:
             print("Failed to obtain tenant_access_token. Images will not be uploaded.")
@@ -304,13 +335,15 @@ def main():
                 if matching_files:
                     trend_groups_for_message.append({
                         "description": group["description"],
-                        "image_key": f"mock_image_key_for_{filename_base}_no_token" # Placeholder
+                        "image_key": f"mock_image_key_for_{filename_base}_no_token", # Placeholder
+                        "url": group["url"]
                     })
                 else:
                     print(f"Screenshot not found for group {group['name']} at {screenshot_path}")
                     trend_groups_for_message.append({
                         "description": group["description"],
-                        "image_key": None
+                        "image_key": None,
+                        "url": group["url"]
                     })
 
     if trend_groups_for_message:
