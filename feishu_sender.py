@@ -15,21 +15,21 @@ SCREENSHOT_DIR = os.path.join(SCRIPT_DIR, "screenshots")
 
 # From take_screenshots.py, ensure this matches
 TREND_GROUPS = [
-    {"name": "chatgpt", "description": "ChatGPT 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=chatgpt&hl=zh-CN"},
+        {"name": "chatgpt", "description": "ChatGPT 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=chatgpt&hl=zh-CN"},
     {"name": "gpt4o", "description": "GPT4o 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=gpt4o&hl=zh-CN"},
     {"name": "chat_models", "description": "Claude,Deepseek,Gemini,Grok,Qwen 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=claude,deepseek,gemini,grok,qwen&hl=zh-CN"},
     {"name": "ai_video_models", "description": "Kling AI,Pika AI,Hailuo AI,Veo AI,Pixverse 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=kling%20ai,pika%20ai,hailuo%20ai,veo%20ai,pixverse&hl=zh-CN"},
     {"name": "ai_features", "description": "AI Translate,AI Write,ChatPDF,AI Content Detector,PDF Translator 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20translate,ai%20write,chatpdf,ai%20content%20detector,pdf%20translator&hl=zh-CN"},
     {"name": "ai_creative", "description": "AI Video,AI Image,Animation 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=ai%20video,ai%20image,animation&hl=zh-CN"},
-    {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
-    {"name": "ai_platforms", "description": "Poe AI,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe%20ai,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
     {"name": "ai_tools", "description": "Lovart,Flowith,Fellou,Deepwiki,Devin AI 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=lovart,flowith,fellou,deepwiki,devin%20ai&hl=zh-CN"},
-    {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Coze 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,coze&hl=zh-CN"},
     {"name": "ai_image_models", "description": "Sora,Midjourney,Runway,Freepik 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=sora,midjourney,runway,freepik&hl=zh-CN"},
     {"name": "platform_tools", "description": "Civitai,Flux AI,Liblib,Pollo AI 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=civitai,flux%20ai,liblib,pollo%20ai&hl=zh-CN"},
     {"name": "slide_tools", "description": "Slidesgo,Base44 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=slidesgo,base44&hl=zh-CN"},
     {"name": "ai_agents2", "description": "Trae AI,Skywork,Minimax Agent 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=trae%20ai,skywork,minimax%20agent&hl=zh-CN"},
-    {"name": "browser_tools", "description": "Dia Browser,Arc Browser,Dify AI 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=dia%20browser,arc%20browser,dify%20ai&hl=zh-CN"}
+    {"name": "browser_tools", "description": "Dia Browser,Arc Browser,Dify AI,Coze 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=dia%20browser,arc%20browser,dify%20ai,coze&hl=zh-CN"},
+    {"name": "ai_platforms", "description": "Poe,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
+    {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
+    {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Claude Code 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,claude%20code&hl=zh-CN"}
 ]
 
 
@@ -230,7 +230,7 @@ def main():
     for group in TREND_GROUPS:
         filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
         # 查找匹配的文件（支持带时间戳的文件名）
-        matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+        matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f == f"{filename_base}.png"]
         if matching_files:
             screenshots_exist = True
             break
@@ -258,7 +258,7 @@ def main():
         for i, group in enumerate(TREND_GROUPS):
             filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
             # 查找匹配的文件（支持带时间戳的文件名）
-            matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+            matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f == f"{filename_base}.png"]
             if matching_files:
                 screenshot_path = os.path.join(SCREENSHOT_DIR, matching_files[0])  # 使用找到的第一个匹配文件
                 trend_groups_for_message.append({
@@ -279,7 +279,7 @@ def main():
             for group in TREND_GROUPS:
                 filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
                 # 查找匹配的文件（支持带时间戳的文件名）
-                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f == f"{filename_base}.png"]
                 
                 image_key_to_use = None
                 if matching_files:
@@ -300,7 +300,7 @@ def main():
             for i, group in enumerate(TREND_GROUPS):
                 filename_base = re.sub(r'[\\/:*?"<>|]', '_', group["name"])
                 # 查找匹配的文件（支持带时间戳的文件名）
-                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f.startswith(filename_base) and f.endswith(".png")]
+                matching_files = [f for f in os.listdir(SCREENSHOT_DIR) if f == f"{filename_base}.png"]
                 if matching_files:
                     trend_groups_for_message.append({
                         "description": group["description"],

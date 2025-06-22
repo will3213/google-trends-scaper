@@ -28,21 +28,22 @@ MAX_WAIT_TIME = 300  # 最大等待时间（秒）
 
 # 与 take_screenshots.py 保持一致的趋势组
 TREND_GROUPS = [
-    {"name": "chatgpt", "description": "chatgpt", "keywords": ["chatgpt"]},
+        {"name": "chatgpt", "description": "chatgpt", "keywords": ["chatgpt"]},
     {"name": "gpt4o", "description": "gpt4o", "keywords": ["gpt4o"]},
     {"name": "chat_models", "description": "claude,deepseek,gemini,grok,qwen", "keywords": ["claude", "deepseek", "gemini", "grok", "qwen"]},
     {"name": "ai_video_models", "description": "kling ai,pika ai,hailuo ai,veo ai,pixverse", "keywords": ["kling ai", "pika ai", "hailuo ai", "veo ai", "pixverse"]},
     {"name": "ai_features", "description": "ai translate,ai write,chatpdf,ai content detector,pdf translator", "keywords": ["ai translate", "ai write", "chatpdf", "ai content detector", "pdf translator"]},
     {"name": "ai_creative", "description": "ai video,ai image,animation", "keywords": ["ai video", "ai image", "animation"]},
-    {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
-    {"name": "ai_platforms", "description": "poe ai,perplexity,notebooklm,notion,gamma", "keywords": ["poe ai", "perplexity", "notebooklm", "notion", "gamma"]},
     {"name": "ai_tools", "description": "lovart,flowith,fellou,deepwiki,devin ai", "keywords": ["lovart", "flowith", "fellou", "deepwiki", "devin ai"]},
-    {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,coze", "keywords": ["windsurf", "codex", "v0", "zapier", "coze"]},
     {"name": "ai_image_models", "description": "sora,midjourney,runway,freepik", "keywords": ["sora", "midjourney", "runway", "freepik"]},
     {"name": "platform_tools", "description": "civitai,flux ai,liblib,pollo ai", "keywords": ["civitai", "flux ai", "liblib", "pollo ai"]},
     {"name": "slide_tools", "description": "slidesgo,base44", "keywords": ["slidesgo", "base44"]},
     {"name": "ai_agents2", "description": "trae ai,skywork,minimax agent", "keywords": ["trae ai", "skywork", "minimax agent"]},
-    {"name": "browser_tools", "description": "dia browser,arc browser,dify ai", "keywords": ["dia browser", "arc browser", "dify ai"]}
+    {"name": "browser_tools", "description": "dia browser,arc browser,dify ai,coze", "keywords": ["dia browser", "arc browser", "dify ai", "coze"]},
+    {"name": "ai_platforms", "description": "poe,perplexity,notebooklm,notion,gamma", "keywords": ["poe", "perplexity", "notebooklm", "notion", "gamma"]},
+    {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
+    {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,claude code", "keywords": ["windsurf", "codex", "v0", "zapier", "claude code"]}
+
 ]
 
 def sanitize_filename(name):

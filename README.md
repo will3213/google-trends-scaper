@@ -18,15 +18,16 @@
 
 ### 核心脚本
 
-- `trends_api.py` - **主要数据获取脚本**，使用 pytrends API 获取 Google Trends 数据并生成趋势图表
-- `feishu_sender.py` - **主要发送脚本**，负责将图表上传到飞书，组装消息内容，并通过飞书机器人 Webhook 发送到指定群组
-- `run_trends_workflow.sh` - **工作流协调脚本**，按顺序执行数据获取和飞书发送，记录日志，并备份和清理图片
+- `trends_api.py` - 获取 Google Trends 数据并生成趋势图表
+- `feishu_sender.py` - 上传图表到飞书并发送消息
+- `run_trends_workflow.sh` - 本地一键执行数据获取 + 发送的工作流脚本
+- `scheduler.py` - 服务器常驻调度器，按设定间隔调用核心脚本
+- `update_server.sh` - 服务器端一键更新脚本：拉取最新代码并重启 `scheduler.py`
 
 ### 目录结构
 
 - `logs/` - 存储执行日志和备份的趋势图片
 - `screenshots/` - 存储生成的趋势图表
-- `backup_scripts/` - 存储旧版本或不再使用的脚本（仅供参考）
 - `venv/` - Python虚拟环境（推荐使用）
 
 ## 系统需求
@@ -86,7 +87,7 @@
 
 3. **热词分组**：根据需要修改 `feishu_sender.py` 和 `trends_api.py` 中的 `TREND_GROUPS` 列表
 
-详细配置说明请参考 `config_guide.md`。
+（配置步骤已在本 README 中完整说明）
 
 ## 使用方法
 
@@ -146,18 +147,23 @@
 
 ## 当前监控的热词
 
-当前系统监控以下 AI 相关热词的搜索趋势：
+当前系统监控以下 15 组 AI 相关热词的搜索趋势（与 `TREND_GROUPS` 保持完全一致）：
 
-1. **ChatGPT** 热度趋势（全球月搜索量 297M）
-2. **GPT4o** 热度趋势（全球月搜索量 77K）
-3. **Chat 模型词**：claude, deepseek, gemini, grok, qwen（claude 全球月搜索量 1.2M）
-4. **AI 视频模型**：kling ai, pika ai, hailuo ai, veo ai, pixverse（kling ai 全球月搜索量 85K）
-5. **AI 功能词**：ai translate, ai write, chatpdf, ai content detector, pdf translator（ai translate 全球月搜索量 31K）
-6. **AI 创意工具**：ai video, ai image, animation（ai video 全球月搜索量 106K）
-7. **AI 代理工具**：manus, genspark, lovable, cursor, n8n（manus 全球月搜索量 780K）
-8. **AI 平台**：poe, perplexity, notebooklm（poe 全球月搜索量 450K）
-9. **代理工具**：lovart, flowith, fellou, deepwiki, devin ai（deepwiki 全球月搜索量 4.1K）
-10. **开发工具**：windsurf, codex, v0, zapier, coze（windsurf 全球月搜索量 27K）
+1. **ChatGPT**（chatgpt）
+2. **GPT-4o**（gpt4o）
+3. **Chat 模型词**：claude, deepseek, gemini, grok, qwen
+4. **AI 视频模型**：kling ai, pika ai, hailuo ai, veo ai, pixverse
+5. **AI 功能词**：ai translate, ai write, chatpdf, ai content detector, pdf translator
+6. **AI 创意工具**：ai video, ai image, animation
+7. **AI 工具**：lovart, flowith, fellou, deepwiki, devin ai
+8. **AI 图像模型**：sora, midjourney, runway, freepik
+9. **平台工具**：civitai, flux ai, liblib, pollo ai
+10. **幻灯片工具**：slidesgo, base44
+11. **AI Agent 工具 II**：trae ai, skywork, minimax agent
+12. **浏览器 / 工具**：dia browser, arc browser, dify ai, coze
+13. **AI 平台**：poe, perplexity, notebooklm, notion, gamma
+14. **AI Agent 工具**：manus, genspark, lovable, cursor, n8n
+15. **开发工具**：windsurf, codex, v0, zapier, claude code
 
 ## 更新日志
 
@@ -181,40 +187,22 @@
 - 配置：1 vCPU, 1024.00 MB RAM, 25 GB NVMe存储
 - 项目路径：~/google-trends-scaper
 
-### 服务器更新步骤
+### 服务器快速更新
 
-1. SSH 连接到服务器：
-   ```bash
-   ssh root@45.77.129.59
-   ```
+服务器已配置 `scheduler.py` 常驻进程运行定时任务，推荐使用仓库自带脚本 `update_server.sh` 完成热更新：
 
-2. 进入项目目录：
-   ```bash
-   cd ~/google-trends-scaper
-   ```
+```bash
+# 本地执行
+./update_server.sh
+```
 
-3. 停止当前运行的进程：
-   ```bash
-   # 查找进程 ID
-   ps aux | grep python
-   # 停止进程（替换PID为实际进程 ID）
-   kill PID
-   ```
+脚本操作流程：
+1. SSH 到服务器并切换到项目目录
+2. `git pull` 拉取最新代码
+3. 重启 `scheduler.py`（如果已在运行则先 kill 后重启）
+4. 打印调度器状态
 
-4. 拉取最新代码：
-   ```bash
-   git pull
-   ```
-
-5. 重新启动调度器：
-   ```bash
-   nohup python3 scheduler.py > scheduler.log 2>&1 &
-   ```
-
-6. 确认进程已重新启动：
-   ```bash
-   ps aux | grep python
-   ```
+整个过程无需手动输入指令，几秒即可完成部署。
 
 ## 故障排除
 
