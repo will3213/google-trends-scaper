@@ -1,6 +1,6 @@
 # Google Trends Scraper
 
-English | [简体中文](#项目简介)
+English | [简体中文](README.md)
 
 ---
 
@@ -76,7 +76,7 @@ Current canonical list (2025-06-22):
 10. slide_tools – slidesgo / base44
 11. ai_agents2 – trae ai / skywork / minimax agent
 12. browser_tools – dia browser / arc browser / dify ai / coze
-13. ai_platforms – poe / perplexity / notebooklm / notion / gamma
+13. ai_platforms – poe ai / perplexity / notebooklm / notion / gamma
 14. ai_agents – manus / genspark / lovable / cursor / n8n
 15. dev_tools – windsurf / codex / v0 / zapier / claude code
 
@@ -217,7 +217,7 @@ Google Trends Scraper 是一个自动化工具集，用于定时抓取预设关�
 10. slide_tools – slidesgo / base44
 11. ai_agents2 – trae ai / skywork / minimax agent
 12. browser_tools – dia browser / arc browser / dify ai / coze
-13. ai_platforms – poe / perplexity / notebooklm / notion / gamma
+13. ai_platforms – poe ai / perplexity / notebooklm / notion / gamma
 14. ai_agents – manus / genspark / lovable / cursor / n8n
 15. dev_tools – windsurf / codex / v0 / zapier / claude code
 

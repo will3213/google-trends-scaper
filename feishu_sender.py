@@ -28,7 +28,7 @@ TREND_GROUPS = [
     {"name": "slide_tools", "description": "Slidesgo,Base44 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=slidesgo,base44&hl=zh-CN"},
     {"name": "ai_agents2", "description": "Trae AI,Skywork,Minimax Agent 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=trae%20ai,skywork,minimax%20agent&hl=zh-CN"},
     {"name": "browser_tools", "description": "Dia Browser,Arc Browser,Dify AI,Coze 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=dia%20browser,arc%20browser,dify%20ai,coze&hl=zh-CN"},
-    {"name": "ai_platforms", "description": "Poe,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
+    {"name": "ai_platforms", "description": "Poe AI,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe%20ai,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
     {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
     {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Claude Code 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,claude%20code&hl=zh-CN"}
 ]

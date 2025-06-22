@@ -40,7 +40,7 @@ TREND_GROUPS = [
     {"name": "slide_tools", "description": "slidesgo,base44", "keywords": ["slidesgo", "base44"]},
     {"name": "ai_agents2", "description": "trae ai,skywork,minimax agent", "keywords": ["trae ai", "skywork", "minimax agent"]},
     {"name": "browser_tools", "description": "dia browser,arc browser,dify ai,coze", "keywords": ["dia browser", "arc browser", "dify ai", "coze"]},
-    {"name": "ai_platforms", "description": "poe,perplexity,notebooklm,notion,gamma", "keywords": ["poe", "perplexity", "notebooklm", "notion", "gamma"]},
+    {"name": "ai_platforms", "description": "poe ai,perplexity,notebooklm,notion,gamma", "keywords": ["poe ai", "perplexity", "notebooklm", "notion", "gamma"]},
     {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
     {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,claude code", "keywords": ["windsurf", "codex", "v0", "zapier", "claude code"]}
 
