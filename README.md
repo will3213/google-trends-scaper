@@ -163,7 +163,7 @@
 12. **浏览器 / 工具**：dia browser, arc browser, dify ai, coze
 13. **AI 平台**：poe, perplexity, notebooklm, notion, gamma
 14. **AI Agent 工具**：manus, genspark, lovable, cursor, n8n
-15. **开发工具**：windsurf, codex, v0, zapier, claude code
+15. **开发工具**：windsurf, codex, kiro, zapier, claude code
 
 ## 更新日志
 

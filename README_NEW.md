@@ -78,7 +78,7 @@ Current canonical list (2025-06-22):
 12. browser_tools – dia browser / arc browser / dify ai / coze
 13. ai_platforms – poe ai / perplexity / notebooklm / notion / gamma
 14. ai_agents – manus / genspark / lovable / cursor / n8n
-15. dev_tools – windsurf / codex / v0 / zapier / claude code
+15. dev_tools – windsurf / codex / kiro / zapier / claude code
 
 ---
 
@@ -219,7 +219,7 @@ Google Trends Scraper 是一个自动化工具集，用于定时抓取预设关�
 12. browser_tools – dia browser / arc browser / dify ai / coze
 13. ai_platforms – poe ai / perplexity / notebooklm / notion / gamma
 14. ai_agents – manus / genspark / lovable / cursor / n8n
-15. dev_tools – windsurf / codex / v0 / zapier / claude code
+15. dev_tools – windsurf / codex / kiro / zapier / claude code
 
 ---
 

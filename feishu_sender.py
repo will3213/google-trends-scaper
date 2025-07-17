@@ -30,7 +30,7 @@ TREND_GROUPS = [
     {"name": "browser_tools", "description": "Dia Browser,Arc Browser,Dify AI,Coze 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=dia%20browser,arc%20browser,dify%20ai,coze&hl=zh-CN"},
     {"name": "ai_platforms", "description": "Poe AI,Perplexity,NotebookLM,Notion,Gamma 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=poe%20ai,perplexity,notebooklm,notion,gamma&hl=zh-CN"},
     {"name": "ai_agents", "description": "Manus,Genspark,Lovable,Cursor,N8N 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=manus,genspark,lovable,cursor,n8n&hl=zh-CN"},
-    {"name": "dev_tools", "description": "Windsurf,Codex,V0,Zapier,Claude Code 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,v0,zapier,claude%20code&hl=zh-CN"}
+    {"name": "dev_tools", "description": "Windsurf,Codex,Kiro,Zapier,Claude Code 热度趋势", "url": "https://trends.google.com/trends/explore?date=now%207-d&q=windsurf,codex,kiro,zapier,claude%20code&hl=zh-CN"}
 ]
 
 

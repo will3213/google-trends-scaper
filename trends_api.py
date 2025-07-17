@@ -42,7 +42,7 @@ TREND_GROUPS = [
     {"name": "browser_tools", "description": "dia browser,arc browser,dify ai,coze", "keywords": ["dia browser", "arc browser", "dify ai", "coze"]},
     {"name": "ai_platforms", "description": "poe ai,perplexity,notebooklm,notion,gamma", "keywords": ["poe ai", "perplexity", "notebooklm", "notion", "gamma"]},
     {"name": "ai_agents", "description": "manus,genspark,lovable,cursor,n8n", "keywords": ["manus", "genspark", "lovable", "cursor", "n8n"]},
-    {"name": "dev_tools", "description": "windsurf,codex,v0,zapier,claude code", "keywords": ["windsurf", "codex", "v0", "zapier", "claude code"]}
+    {"name": "dev_tools", "description": "windsurf,codex,kiro,zapier,claude code", "keywords": ["windsurf", "codex", "kiro", "zapier", "claude code"]}
 
 ]
 
